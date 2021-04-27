@@ -1,0 +1,24 @@
+{
+  "name": "knivey/irctools",
+  "description": "Tools for irc stuff",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "version": "1.0",
+  "autoload": {
+    "psr-4": { "knivey\\irctools\\": "src" },
+    "files": [
+      "src/fixColors.php",
+      "src/functions.php",
+      "src/rainbow.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "knivey",
+      "email": "knivey@botops.net"
+    }
+  ],
+  "require": {
+    "ext-mbstring": "*"
+  }
+}
