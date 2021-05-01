@@ -13,13 +13,21 @@ function diagRainbow(string $input, $blockSize = null, int $dir = 1): string
     $out = "";
     //Colors 52 - 63 seems really nice and in proper order
     $startColor = 52;
+
+    $bsize = 0;
+    if ($blockSize == null) {
+        foreach ($text as $line) {
+            $bsize = ceil(mb_strlen($line) / 11);
+        }
+    } else {
+        $bsize = $blockSize;
+        if ($bsize < 1)
+            $bsize = 1;
+    }
+
     foreach ($text as $line) {
         if (mb_strlen($line) < 1)
             continue;
-        $bsize = $blockSize ?? (ceil(mb_strlen($line) / 11));
-        //perhaps should be exception
-        if ($bsize < 1)
-            $bsize = 1;
         $blocks = mb_str_split($line, $bsize);
         $curColor = $startColor;
         foreach ($blocks as $block) {
