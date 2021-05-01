@@ -17,7 +17,7 @@ function diagRainbow(string $input, $blockSize = null, int $dir = 1): string
     $bsize = 0;
     if ($blockSize == null) {
         foreach ($text as $line) {
-            $bsize = ceil(mb_strlen($line) / 11);
+            $bsize = max(ceil(mb_strlen($line) / 11), $bsize);
         }
     } else {
         $bsize = $blockSize;
