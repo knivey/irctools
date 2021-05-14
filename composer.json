@@ -3,7 +3,6 @@
   "description": "Tools for irc stuff",
   "minimum-stability": "stable",
   "license": "MIT",
-  "version": "1.0",
   "autoload": {
     "psr-4": { "knivey\\irctools\\": "src" },
     "files": [
