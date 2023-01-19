@@ -74,6 +74,7 @@ function bar_meter($n, $d) {
  * @param string $string
  * @param bool $ignoreCase
  * @return bool
+ * @deprecated use knivey\tools\globToRegex instead
  */
 function pmatch($mask, $string, $ignoreCase = TRUE) {
     $expr = preg_replace_callback ('/[\\\\^$.[\\]|()?*+{}\\-\\/]/', function ($matches) {
